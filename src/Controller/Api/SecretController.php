@@ -1,7 +1,7 @@
 <?php
 
 /**
- * SecretController class
+ * SecretController Class
  */
 class SecretController extends BaseController
 {

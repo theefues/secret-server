@@ -1,10 +1,38 @@
 <?php
+
+/**
+ * DatabaseModel Class
+ */
 class DatabaseModel
 {
+	/**
+	 * Active connection
+	 * @var PDO
+	 */
 	protected	$_connection = null;
+
+	/**
+	 * Last query
+	 * @var object
+	 */
 	public 	$_query = null;
+
+	/**
+	 * Was there an error
+	 * @var bool
+	 */
 	public	$_error = false;
+
+	/**
+	 * Result of the query
+	 * @var object
+	 */
 	public	$_results = null;
+
+	/**
+	 * Count of rows
+	 * @var int
+	 */
 	public 	$_count = 0;
 
 	public function __construct()

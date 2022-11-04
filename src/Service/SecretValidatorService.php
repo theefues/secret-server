@@ -1,8 +1,20 @@
 <?php
 
+/**
+ * SecretValidatorService Class
+ */
 class SecretValidatorService
 {
+    /**
+     * Secret to validate
+     * @var array
+     */
     private $_secret;
+
+    /**
+     * Occured errors
+     * @var array
+     */
     private $_errors;
 
     public function __construct($secret)

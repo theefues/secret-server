@@ -1,5 +1,8 @@
 <?php
 
+/**
+ * SecretService Class
+ */
 class SecretService
 {
     /**

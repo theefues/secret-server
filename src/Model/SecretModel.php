@@ -1,5 +1,8 @@
 <?php
 
+/**
+ * SecretModel Class
+ */
 class SecretModel extends DatabaseModel
 {
     /**
