@@ -54,7 +54,7 @@
             {
               "in": "formData",
               "name": "expiresAfter",
-              "description": "The secret won't be available after the given time. The value is provided in minutes. 0 means never expires",
+              "description": "The secret won't be available after the given time. The value is provided in minutes. Empty or 0 means never expires",
               "required": false,
               "type": "integer",
               "format": "int32"
