@@ -22,6 +22,13 @@ class SecretModel extends DatabaseModel
      */
     public function addSecret($secret)
     {
+        
+        if(isset($secret['expiresAfter']) && round(intval($secret['expiresAfter'])) > 0) {
+            $secret['expiresAt'] = date('Y-m-d H:i:s', round(intval($secret['expiresAfter']))*60 + time());
+        }
+        
+        unset($secret['expiresAfter']);
+        
         return $this->insert('secrets', $secret);
     }
 

@@ -44,12 +44,6 @@ class SecretService
             return ['error' => true, 'message' => $validator->getErrors()];
         }
 
-        if(isset($secret['expiresAfter']) && round(intval($secret['expiresAfter'])) > 0) {
-            $secret['expiresAt'] = date('Y-m-d H:i:s', round(intval($secret['expiresAfter']))*60 + time());
-        }
-        
-        unset($secret['expiresAfter']);
-
         $secretModel = new SecretModel();
         $secretModel->addSecret($secret);
 
